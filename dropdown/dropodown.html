@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dropdown</title>
+    <link rel="stylesheet" type="text/css" href="./dropdown.css">
+</head>
+
+<body>
+    <div class="dr">
+        <ul class="dr-f-ul clearfix">
+            <li><a href="">Wantsssss</a></li>
+            <li><a href="">Wantsssdaferss</a></li>
+            <li><a href="">Wantsssss</a></li>
+            <li>
+                <ul class="dr-s-ul clearfix">
+                    <li class="third"><a href="">LoadMore</a> <i></i></li>
+                    <li class="none"><a href="">2</a></li>
+                    <li class="none"><a href="">3</a></li>
+                    <li class="none"><a href="">4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+<!--<script src="//cdn.bootcss.com/jquery/3.2.1/core.js"></script>-->
+<script>
+    var _Dropdown = (function() {
+        var Dropdown = function(div, li, i, none) {
+            this.div = div;
+            this.li = li;
+            this.i = i;
+            this.none = none;
+            this.mouseover();
+            this.mouseleave();
+        }
+        Dropdown.prototype.mouseover = function() {
+            this.li = Array.prototype.slice.call(this.li)
+            var _this = this;
+            this.div.addEventListener("mouseover", function(e) {
+                if (e.target.tagName.toLowerCase() === "li") {
+                    _this.li.forEach(function(idx, element) {
+                        idx.classList.remove("addbg");
+                    });
+                    if (e.target.className.toLowerCase() == "third") {
+                        _this.i.classList.add("addi");
+                        _this.none.forEach(function(element) {
+                            element.classList.remove("none");
+                        }, this);
+                    }
+                    e.target.classList.add("addbg");
+                }
+            })
+        }
+
+        Dropdown.prototype.mouseleave = function() {
+            var _this = this;
+            this.none = Array.prototype.slice.call(this.none)
+            this.div.addEventListener("mouseleave", function() {
+                _this.li.forEach(function(element) {
+                    element.classList.remove("addbg");
+                });
+                _this.i.classList.remove("addi");
+                _this.none.forEach(function(element) {
+                    element.classList.add("none");
+                }, this);
+            })
+        }
+        return {
+            init: function(div, li, i, none) {
+                new Dropdown(div, li, i, none);
+            }
+        }
+
+    })()
+
+    // var div = document.getElementsByTagName("div")[0];
+    // var li = document.getElementsByTagName("li");
+    // var i = document.getElementsByTagName("i")[0];
+    // var none = document.getElementsByClassName("none");
+    // console.log(none);
+    // var a = new _Dropdown.init(div, li, i, none);
+    var a = new _Dropdown.init(document.getElementsByTagName("div")[0], document.getElementsByTagName("li"), document.getElementsByTagName(
+        "i")[0], document.getElementsByClassName("none"));
+    // var div = document.getElementsByTagName("div")[0];
+    // var li = document.getElementsByTagName("li");
+    // var i = document.getElementsByTagName("i")[0];
+    // var none = document.getElementsByClassName("none");
+    // li = Array.prototype.slice.call(li);
+    // none = Array.prototype.slice.call(none);
+    // div.addEventListener("mouseover", function(e) {
+    //     if (e.target.tagName.toLowerCase() === "li") {
+    //         li.forEach(function(idx, element) {
+    //             idx.classList.remove("addbg");
+    //         });
+    //         if (e.target.className.toLowerCase() == "third") {
+    //             i.classList.add("addi");
+    //             none.forEach(function(element) {
+    //                 element.classList.remove("none");
+    //             }, this);
+    //         }
+    //         e.target.classList.add("addbg");
+    //     }
+    // })
+    // div.addEventListener("mouseleave", function() {
+    //     li.forEach(function(element) {
+    //         element.classList.remove("addbg");
+    //     });
+    //     i.classList.remove("addi");
+    //     none.forEach(function(element) {
+    //         element.classList.add("none");
+    //     }, this);
+    // })
+</script>
+
+</html>
