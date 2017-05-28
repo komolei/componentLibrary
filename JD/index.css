@@ -1,0 +1,136 @@
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+div,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(246, 246, 246);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "\\5b8b体", sans-serif;
+}
+
+span {
+    /*display: inline-block;*/
+}
+
+.clearfix::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.bigct {
+    width: 100%;
+    background: rgb(227, 228, 229);
+}
+
+.ct {
+    width: 1190px;
+    margin: 0 auto;
+    background-color: rgb(227, 228, 229);
+}
+
+.nav-icon {
+    /*display: inline-block;*/
+    width: 257.563px;
+    height: 30px;
+    padding-right: 10px;
+    float: left;
+    line-height: 30px;
+    text-align: right;
+    font-size: 12px;
+    position: relative;
+}
+
+.nav-icon>span {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    padding-right: 10px;
+    padding-left: 2px;
+    /*margin-left: 10px;*/
+}
+
+.nav-icon>span:hover {
+    background-color: #fff;
+    border: 1px solid #999;
+    border-bottom: none;
+}
+
+.nav-ul {
+    float: right;
+}
+
+.nav-ul li {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+
+.nav-ul a {
+    color: #999;
+}
+
+.nav-ul a:nth-of-type(2) {
+    /*border: 1px solid red;*/
+    color: red;
+}
+
+.nav-ul span {
+    padding: 0 7px;
+    font-size: 12px;
+    height: 12px;
+    /*margin-top: 9px;*/
+    border-right: 1px solid #ccc;
+}
+
+.nav-ul a:last-of-type span {
+    border: none;
+}
+
+.select {
+    width: 300px;
+    padding: 10px;
+    background-color: #fff;
+    margin-left: 203px;
+    border: 1px solid #999;
+    border-top: none;
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+
+.dropdown div {
+    width: 40px;
+    height: 24px;
+    float: left;
+    color: #999;
+    padding: 0 0 6px 2px;
+}
+
+.dropdown div:hover {
+    background-color: red;
+    color: #fff;
+}
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtDQUNsQiIsImZpbGUiOiJpbmRleC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubGkge1xuICBsaXN0LXN0eWxlOiBub25lO1xufVxuIl19 */
