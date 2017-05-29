@@ -1,0 +1,11 @@
+{
+    "name": "komoleijd",
+    "version": "1.0.0",
+    "description": "",
+    "main": "shangke.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "komolei",
+    "license": "ISC"
+}
