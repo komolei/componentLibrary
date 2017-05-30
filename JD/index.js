@@ -97,3 +97,94 @@ $(".buycar-dropdown").on("mouseleave", function() {
 $(".searchc").on("click", function() {
     //搜索
 })
+var carousel = $('.carousel');
+var btnnext = $('.btn-next');
+var btnpre = $('.btn-pre');
+var ctimgli = $('.ct-img li');
+var ctimg = $('.ct-img');
+var index = 0;
+var bullet = $('.bullet');
+var len = $('.ct-img li').width();
+ctimg.append(ctimgli.first().clone());
+ctimg.prepend(ctimgli.last().clone());
+var isLockUp = false;
+ctimg.css('left', -len);
+ctimg.width(ctimg.children().length * len);
+var play = function() {
+        let a = setInterval(function() {
+            ctimg.animate({
+                left: '-=' + len,
+            }, function() {
+                index++;
+                if (index == ctimgli.length) {
+                    index = 0;
+                    ctimg.css('left', -len + 'px');
+                }
+                setBullet();
+            })
+        }, 2000)
+        carousel.on("mouseover", function() {
+            clearInterval(a);
+        })
+
+    }
+    // play();
+carousel.on("mouseleave", function() {
+    // play();
+})
+btnnext.click(function() {
+    event.preventDefault();
+    if (isLockUp) {
+        return;
+    }
+    isLockUp = true;
+    ctimg.animate({
+        left: '-=' + len,
+    }, function() {
+        index++;
+        if (index == ctimgli.length) {
+            index = 0;
+            ctimg.css('left', -len + 'px');
+        }
+        setBullet();
+        isLockUp = false;
+    })
+})
+btnpre.click(function() {
+    if (isLockUp) return;
+    event.preventDefault();
+    ctimg.animate({
+        left: '+=' + len,
+    }, function() {
+        index--;
+        if (index < 0) {
+            ctimg.css('left', -ctimgli.length * ctimgli.width())
+            index = ctimgli.length - 1;
+        }
+        isLockUp = false;
+        setBullet();
+    })
+})
+
+function setBullet() {
+    // console.log(1);
+    bullet.children().css({
+        backgroundColor: "#fff",
+    }).eq(index).css({
+        backgroundColor: "red",
+    })
+}
+
+$(".tabList").on("mouseover", function(e) {
+    if (e.target.tagName.toLowerCase() === "div") {
+        console.log($(e.target).attr("index"));
+        $(".tabList-new").each(function(idx) {
+            $(this).css({
+                display: "none"
+            })
+        });
+        $(".tabList-new").eq($(e.target).attr("index") - 1).css({
+            display: "block"
+        })
+    }
+})
