@@ -13,17 +13,27 @@
 </head>
 
 <body>
+    <div class="fixed-nav">
+        <div class="fixed-nav-ct">
+            <div class="fixed-icon"></div>
+            <div class="search" id="fixed-search"><input id="fixed-searchi" class="searchi" type="search" name="" value="" placeholder="买买买"></div>
+            <div class="searcha" id="fixed-searcha" href="">
+                <input class="searchicon" id="fixed-searchicon" type="file" accept="image/png,image/jpeg,image/jpg">
+            </div>
+            <div id="fixed-searchc" class="searchc"><img src="./img/搜索_搜索.png" alt=""></div>
+        </div>
+    </div>
     <div class="bigct clearfix">
         <div class="smct">
             <div class="ct" style="height:30px;">
                 <nav class="ct-nav clearfix">
-                    <div class="nav-icon"><span class="beijing">    
+                    <div class="nav-icon"><span class="beijing" id="dibiao"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-dibiao"></use></svg>北京
                         <div class="select clearfix">
                             <div class="dropdown">
-                                <a href="javascript:void(0)">
+                                <a href="">
                                     <div>北京</div>
                                 </a>
-                                <a href="javascript:void(0)">
+                                <a href="">
                                     <div>上海</div>
                                 </a>
                                 <a href="javascript:void(0)">
@@ -308,22 +318,42 @@
                 <div class="ct-2 clearfix">
                     <div class="ct-2-left clearfix">
                         <ul class="ct-2-ul-left clearfix">
-                            <li><a href="">家用电器</a></li>
-                            <li><a href="">手机/运营商/数码</a></li>
-                            <li><a href="">电脑/办公</a></li>
-                            <li><a href="">家居/家具/家装/厨具</a></li>
-                            <li><a href="">男装/女装/童装/内衣</a></li>
-                            <li><a href="">美妆个护/宠物</a></li>
-                            <li><a href="">女鞋/箱包/钟表/珠宝</a></li>
-                            <li><a href="">男鞋/运动/户外</a></li>
-                            <li><a href="">汽车/汽车用品</a></li>
-                            <li><a href="">母婴/玩具乐器</a></li>
-                            <li><a href="">食品/酒类/生鲜/特产</a></li>
-                            <li><a href="">礼品鲜花/农资绿植</a></li>
-                            <li><a href="">医药保健/计生情趣</a></li>
-                            <li><a href="">图书/音像/电子书</a></li>
-                            <li><a href="">机票/酒店/旅游/生活</a></li>
-                            <li><a href="">理财/众筹/白条/保险</a></li>
+                            <li index="1"><a index="1" href="">家用电器</a></li>
+                            <li index="2"><a index="2" href="">手机/运营商/数码</a></li>
+                            <li index="3"><a index="3" href="">电脑/办公</a></li>
+                            <li index="4"><a index="4" href="">家居/家具/家装/厨具</a></li>
+                            <li index="5"><a index="5" href="">男装/女装/童装/内衣</a></li>
+                            <li index="6"><a index="6" href="">美妆个护/宠物</a></li>
+                            <li index="7"><a index="7" href="">女鞋/箱包/钟表/珠宝</a></li>
+                            <li index="8"><a index="8" href="">男鞋/运动/户外</a></li>
+                            <li index="9"><a index="9" href="">汽车/汽车用品</a></li>
+                            <li index="10"><a index="10" href="">母婴/玩具乐器</a></li>
+                            <li index="11"><a index="11" href="">食品/酒类/生鲜/特产</a></li>
+                            <li index="12"><a index="12" href="">礼品鲜花/农资绿植</a></li>
+                            <li index="13"><a index="13" href="">医药保健/计生情趣</a></li>
+                            <li index="14"><a index="14" href="">图书/音像/电子书</a></li>
+                            <li index="15"><a index="15" href="">机票/酒店/旅游/生活</a></li>
+                            <li index="16"><a index="16" href="">理财/众筹/白条/保险</a></li>
+                        </ul>
+                    </div>
+                    <div class="ct-2-middle clearfix" id="ct-2-left-meun">
+                        <ul class="clearfix">
+                            <li index="1">内容1</li>
+                            <li index="2">内容2</li>
+                            <li index="3">内容3</li>
+                            <li index="4">内容4</li>
+                            <li index="5">内容5</li>
+                            <li index="6">内容6</li>
+                            <li index="7">内容7</li>
+                            <li index="8">内容8</li>
+                            <li index="9">内容9</li>
+                            <li index="10">内容10</li>
+                            <li index="11">内容11</li>
+                            <li index="12">内容12</li>
+                            <li index="13">内容13</li>
+                            <li index="14">内容14</li>
+                            <li index="15">内容15</li>
+                            <li index="16">内容16</li>
                         </ul>
                     </div>
                     <div class="ct-2-middle clearfix">
@@ -460,6 +490,9 @@
                                 <li><a href=""><span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-baitiao"></use></svg>白条</span></a></li>
 
                             </ul>
+
+                        </div>
+                        <div class="ct-2-right-bottom-content">
                             <div class="ct-2-right-bottom-tab">
                                 <ul class="clearfix">
                                     <a href="">
@@ -478,7 +511,7 @@
                             </div>
                             <div class="ct-2-right-bottom-dropdown">
                                 <ul class="clearfix">
-                                    <li class="ct-2-right-bottom-dropdown-li" index="1">
+                                    <li class="ct-2-right-bottom-dropdown-li" id="ct-2-right-bottom-dropdown-li" index="1">
                                         <span>X</span>
                                         <ul class="ct-2-right-bottom-dropdown-li-ul clearfix">
                                             <li cIndex="1">话费充值</li>
@@ -487,11 +520,11 @@
                                         </ul>
                                         <ul class="ct-2-right-bottom-dropdown-li-ul2 clearfix">
                                             <li class="ct-2-right-bottom-dropdown-li-ul2-li" cIndex="1">
-                                                <div>
+                                                <div class="clearfix">
                                                     <span>号码</span>
                                                     <input type="text" placeholder="请输入手机号">
                                                 </div>
-                                                <div>
+                                                <div class="clearfix">
                                                     <span>面值</span>
                                                     <select name="面值" id="">
                                                         <option value="10">10元</option>
@@ -508,7 +541,7 @@
                                                     快速充值
                                                 </div>
                                                 <div class="hot">
-                                                    <i></i>
+                                                    <b>HOT</b>
                                                     <span>抢50元话费券</span>
                                                 </div>
                                             </li>
@@ -516,9 +549,21 @@
                                             <li cIndex="3"></li>
                                         </ul>
                                     </li>
-                                    <li class="ct-2-right-bottom-dropdown-li" index="2"></li>
-                                    <li class="ct-2-right-bottom-dropdown-li" index="3"></li>
-                                    <li class="ct-2-right-bottom-dropdown-li" index="4"></li>
+                                    <li class="ct-2-right-bottom-dropdown-li" index="2">
+                                        <span>X</span>
+                                        <div>内容2</div>
+
+                                    </li>
+                                    <li class="ct-2-right-bottom-dropdown-li" index="3">
+                                        <span>X</span>
+                                        <div>内容3</div>
+
+                                    </li>
+                                    <li class="ct-2-right-bottom-dropdown-li" index="4">
+                                        <span>X</span>
+                                        <div>内容4</div>
+
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -527,7 +572,415 @@
 
             </div>
         </div>
+        <div class="bigct-3 clearfix">
+            <div class="timeout clearfix">
+                <i></i>
+                <i></i>
+                <span id="timeout-miaosha">京东秒杀</span>
+                <a href=""><span id="timeout-lowPrice">总有你想不到的低价&gt</span></a>
+                <p> 当前场次</p>
+                <div class="timeout-show">
+                    <b class="timeout-show-first"></b>
+                    <b class="timeout-show-second"></b>
+                    <b class="timeout-show-third"></b>
 
+                </div>
+                <p> 后结束抢购 </p>
+            </div>
+        </div>
+        <div class="bigct-4 ">
+            <div class="bigct-4-carousel ">
+                <ul class="bigct-4-carousel-ul clearfix">
+                    <a href="$">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img10.360buyimg.com/n4/s260x260_jfs/t4045/195/1861279176/1106145/9ba8f0d1/589be393N398d5153.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img14.360buyimg.com/n4/s260x260_jfs/t3097/279/1424989832/358902/16d72bed/57cd23d9N003fe68c.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img14.360buyimg.com/n4/s260x260_jfs/t4429/242/2980673389/140219/ebc6e9d8/58f739fdN4cc92cdc.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img13.360buyimg.com/n4/s260x260_jfs/t3994/48/658060099/170310/506f1d87/58b66e3eN975948db.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img14.360buyimg.com/n4/s260x260_jfs/t5722/210/1195046468/130982/8641cd19/5923f3a7N27cebfcf.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img13.360buyimg.com/n4/s260x260_jfs/t3568/144/716787036/178365/ced4c9ea/58126f04N3765de00.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <div><img src="https://img11.360buyimg.com/n4/s260x260_jfs/t4045/207/2124605951/271295/e31a7fe2/58a26044N05b7c35b.jpg" alt=""></div>
+                            <p>【京东超市】御泥坊 透亮红酒面膜贴21片装（补水保湿 奢养亮肤 嫩滑细致 男女士护肤品套装）</p>
+                            <p><i>￥</i><span>130</span> <i>￥</i><del>220</del></p>
+                        </li>
+                    </a>
+                </ul>
+                <div class="bigct-4-btn pre">&lt</div>
+                <div class="bigct-4-btn next">&gt</div>
+            </div>
+            <div class="bigct-4-sm clearfix">
+                <a href=""><img src="https://img10.360buyimg.com/mobilecms/s360x450_jfs/t5899/317/2305095984/122287/9d525445/592eaf5bN25a3b5cd.png!q90" alt=""></a>
+
+            </div>
+        </div>
+        <div class="bigct-5">
+            <ul class="bigct-5-ul clearfix">
+                <li>
+                    <div class="header"><span>发现好货</span><span><a href="">发现品质生活></a></span></div>
+                    <div class="content">
+                        <ul class="clearfix">
+                            <a href="">
+                                <li>
+                                    <p>机械革命I7游戏主机</p>
+                                    <img src="http://img13.360buyimg.com/mobilecms/s160x160_jfs/t5710/133/1861407572/197874/f1b3bb41/592aa018N40072e11.jpg!q90.webp" alt="">
+
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <p>AOC 4K旋转显示器</p>
+                                    <img src="http://img12.360buyimg.com/mobilecms/s160x160_jfs/t6103/185/597055503/227114/f73a4f5e/592aa54eNaa6bb694.jpg!q90.webp" alt="">
+
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <p>条纹纯棉POLO衫</p>
+                                    <img src="http://img11.360buyimg.com/mobilecms/s160x160_jfs/t5890/11/1796684637/433308/4039216/592986c7N2b6ff3f0.jpg!q90.webp" alt="">
+
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <p>创维 4K网络电视</p>
+                                    <img src="http://img12.360buyimg.com/mobilecms/s160x160_jfs/t5761/264/1168182478/124962/925f6fc/592427d2N8d36589e.jpg!q90.webp" alt="">
+
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <p>小米头戴式线控耳机</p>
+                                    <img src="http://img12.360buyimg.com/mobilecms/s160x160_jfs/t5821/189/1678422758/40424/949bb9c1/5928eccbN405dd7bd.jpg!q90.webp" alt="">
+
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <p>茵曼提花套装吊带裙</p>
+                                    <img src="http://img11.360buyimg.com/mobilecms/s160x160_jfs/t5992/3/667906306/88439/fd41c9bf/592a4b7dNa0019896.jpg!q90.webp" alt="">
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="header"><span>发现好货</span><span><a href="">发现品质生活></a></span></div>
+                    <div class="content">
+                        <ul class="clearfix">
+                            <a href="">
+                                <li>
+                                    <p>机械革命I7游戏主机</p>
+                                    <img src="http://img13.360buyimg.com/mobilecms/s160x160_jfs/t5710/133/1861407572/197874/f1b3bb41/592aa018N40072e11.jpg!q90.webp" alt="">
+
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <p>AOC 4K旋转显示器</p>
+                                    <img src="http://img12.360buyimg.com/mobilecms/s160x160_jfs/t6103/185/597055503/227114/f73a4f5e/592aa54eNaa6bb694.jpg!q90.webp" alt="">
+
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <p>条纹纯棉POLO衫</p>
+                                    <img src="http://img11.360buyimg.com/mobilecms/s160x160_jfs/t5890/11/1796684637/433308/4039216/592986c7N2b6ff3f0.jpg!q90.webp" alt="">
+
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <p>创维 4K网络电视</p>
+                                    <img src="http://img12.360buyimg.com/mobilecms/s160x160_jfs/t5761/264/1168182478/124962/925f6fc/592427d2N8d36589e.jpg!q90.webp" alt="">
+
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <p>小米头戴式线控耳机</p>
+                                    <img src="http://img12.360buyimg.com/mobilecms/s160x160_jfs/t5821/189/1678422758/40424/949bb9c1/5928eccbN405dd7bd.jpg!q90.webp" alt="">
+
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <p>茵曼提花套装吊带裙</p>
+                                    <img src="http://img11.360buyimg.com/mobilecms/s160x160_jfs/t5992/3/667906306/88439/fd41c9bf/592a4b7dNa0019896.jpg!q90.webp" alt="">
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="header"><span>发现好货</span><span><a href="">发现品质生活></a></span></div>
+                    <div class="content">
+                        <ul class="clearfix">
+                            <a href="">
+                                <li>
+                                    <p>机械革命I7游戏主机</p>
+                                    <img src="http://img13.360buyimg.com/mobilecms/s160x160_jfs/t5710/133/1861407572/197874/f1b3bb41/592aa018N40072e11.jpg!q90.webp" alt="">
+
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <p>AOC 4K旋转显示器</p>
+                                    <img src="http://img12.360buyimg.com/mobilecms/s160x160_jfs/t6103/185/597055503/227114/f73a4f5e/592aa54eNaa6bb694.jpg!q90.webp" alt="">
+
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <p>条纹纯棉POLO衫</p>
+                                    <img src="http://img11.360buyimg.com/mobilecms/s160x160_jfs/t5890/11/1796684637/433308/4039216/592986c7N2b6ff3f0.jpg!q90.webp" alt="">
+
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <p>创维 4K网络电视</p>
+                                    <img src="http://img12.360buyimg.com/mobilecms/s160x160_jfs/t5761/264/1168182478/124962/925f6fc/592427d2N8d36589e.jpg!q90.webp" alt="">
+
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <p>小米头戴式线控耳机</p>
+                                    <img src="http://img12.360buyimg.com/mobilecms/s160x160_jfs/t5821/189/1678422758/40424/949bb9c1/5928eccbN405dd7bd.jpg!q90.webp" alt="">
+
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <p>茵曼提花套装吊带裙</p>
+                                    <img src="http://img11.360buyimg.com/mobilecms/s160x160_jfs/t5992/3/667906306/88439/fd41c9bf/592a4b7dNa0019896.jpg!q90.webp" alt="">
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="bigct-6 clearfix">
+            <div class="aside clearfix">
+                <a href="">
+                    <p>领券中心</p>
+                    <hr>
+                    <p>没抢到</p>
+                    <p>可以去看看更多优惠券</p>
+                    <p>前往领券中心></p>
+                </a>
+            </div>
+            <div class="bigct-6-content">
+                <ul class="clearfix">
+                    <li>
+                        <div>
+                            <p>￥100</p>
+                            <p>仅可购买荣耀指定商品</p>
+                            <p>消费满500元可用</p>
+                            <p>更多好券</p>
+                        </div>
+                        <img src="http://img14.360buyimg.com/n7/s280x280_jfs/t3367/25/240325234/302122/91048536/58043ecaN119d6704.jpg!q90.webp" alt="">
+
+                    </li>
+                    <li>
+                        <div>
+                            <p>￥100</p>
+                            <p>仅可购买荣耀指定商品</p>
+                            <p>消费满500元可用</p>
+                            <p>更多好券</p>
+                        </div>
+                        <img src="https://m.360buyimg.com/babel/s280x280_jfs/t5668/312/880440673/15607/7aa4a6b0/59229023N54661796.jpg!q90" alt="">
+
+                    </li>
+                    <li>
+                        <div>
+                            <p>￥100</p>
+                            <p>仅可购买荣耀指定商品</p>
+                            <p>消费满500元可用</p>
+                            <p>更多好券</p>
+                        </div>
+                        <img src="https://m.360buyimg.com/babel/s280x280_jfs/t4645/36/2472727929/5200/7007d732/591c173eNf50a4835.jpg!q90" alt="">
+
+                    </li>
+                    <li>
+                        <div>
+                            <p>￥100</p>
+                            <p>仅可购买荣耀指定商品</p>
+                            <p>消费满500元可用</p>
+                            <p>更多好券</p>
+                        </div>
+                        <img src="https://m.360buyimg.com/babel/s280x280_jfs/t5692/111/902568823/11454/48ced9e7/59229463N32c23111.jpg!q90" alt="">
+
+                    </li>
+                    <li>
+                        <div>
+                            <p>￥100</p>
+                            <p>仅可购买荣耀指定商品</p>
+                            <p>消费满500元可用</p>
+                            <p>更多好券</p>
+                        </div>
+                        <img src="https://m.360buyimg.com/babel/s280x280_jfs/t5773/67/906705148/6416/b64fd433/59229458N77b3ff96.jpg!q90" alt="">
+
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
 

@@ -1,0 +1,51 @@
+/*pbtv*/
+
+
+/*position
+border*/
+
+.button {
+    /*因为大部分的a,span，是行内元素*/
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #ea6f5a;
+    border-radius: 4px;
+    color: #ea6f5a;
+    text-decoration: none;
+}
+
+.label {
+    display: inline-block;
+    padding: 1px 4px;
+    border: 1px solid #ea6f5a;
+    border-radius: 4px;
+}
+
+.info-card {
+    font-size: 13px;
+}
+
+.info-card .avatar {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+
+.info-card .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.info-card .username {
+    margin-left: 4px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.info-card .time {
+    color: #969696;
+}
