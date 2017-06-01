@@ -1,0 +1,143 @@
+            @themeColor: rgb(227, 228, 229);
+            @contentColor: #e0e0e0;
+            @margin: 0 auto;
+            @padding: 0;
+            @ctWidth: 1190px;
+            @textA: center;
+            .titleInit(@w: 1190px, @h: 35px) {
+                width: @w;
+                height: @h;
+                margin: @margin;
+                padding: 0 0 20px;
+                text-align: @textA;
+                background: url()
+            }
+
+            .contentInit() {
+                width: @ctWidth;
+            }
+
+            .h3() {
+                display: inline;
+                padding: 0 50px;
+                background-color: #f6f6f6;
+                font-weight: 400;
+                font-size: 26px;
+                color: #333;
+                font-family: fzzhengheis-el-gbregular;
+            }
+
+            .init(@m: 0,
+            @p: 0) {
+                margin: @m;
+                padding: @p;
+            }
+
+            .middlect {
+                width: 100%;
+                background-color: @themeColor;
+            }
+
+            .ctInit {
+                width: @ctWidth;
+                background-color: @themeColor;
+            }
+
+            .p {
+                .init(0,
+                0);
+            }
+
+            .dw {
+                position: relative;
+            }
+
+            .content(@b: #66B687) {
+                width: 390px;
+                height: 170px;
+                .left {
+                    width: 140px;
+                    height: 170px;
+                    background: @b;
+                    position: absolute;
+                    .info {
+                        width: 100px;
+                        background: @b;
+                        margin: @margin;
+                        h4 {
+                            text-align: center;
+                        }
+                        p {
+                            overflow: hidden;
+                            height: 40px;
+                            border-top: 2px solid #fff;
+                            border-bottom: 2px solid #fff;
+                            font-size: 22px;
+                            line-height: 40px;
+                            text-align: center;
+                            font-family: fzzhengheis-el-gbregular;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                .right {
+                    width: 400px;
+                    height: 170px;
+                    img {
+                        display: block;
+                        width: 400px;
+                        height: 170px; // float: right;
+                        transition: width .4s ease-in-out;
+                        &:hover {
+                            // margin-left: -10px;
+                            width: 380px;
+                        }
+                    }
+                }
+            } // .middlect-bg {
+            //     background:@contentColor;
+            // }
+            .middlebox {
+                .middlect-sm {
+                    width: @ctWidth;
+                    margin: @margin; // height: 50px;
+                    .middlect-c-1 {
+                        .title {
+                            .titleInit();
+                        }
+                        .middle-c-ul {
+                            margin-left: -40px;
+                            .middle-content {
+                                float: left; // margin-left: 20px;
+                                // margin-top:20px;
+                                margin: 20px 20px 0 0;
+                                .content();
+                            }
+                        }
+                    }
+                }
+            }
+
+            .middlect-bg-content {
+                width: 100%;
+                height: 100px;
+                background: #e0e0e0;
+                padding: 20px 0;
+                ul {
+                    width: 1190px;
+                    margin: 0 auto;
+                    li {
+                        float: left;
+                        width: 396px;
+                        height: 100px;
+                        transition: all .5s;
+                        img {
+                            width: 396px;
+                            height: 100px;
+                        }
+                        &:hover {
+                            opacity: .7;
+                        }
+                    }
+                }
+            }

@@ -419,7 +419,7 @@ timeer.prototype.addEvent = function() {
         $(".timeout-show-third").text("0" + s)
     }
 }
-var old = "2017,6,2 00:00:00" //探索。目前这适合这个格式。
+var old = "2017,6,3 00:00:00" //探索。目前这适合这个格式。
 setInterval("new timeer(old)", 1000);
 
 $(".bigct-4-carousel").on("mouseover", function() {
@@ -478,3 +478,126 @@ $(".next").on("click", function() {
     }
     // return lock;
 })
+
+
+//aside-right
+$("#aside-right").on("mouseover", function(e) {
+    // $.each($("#aside-right b"), function(idx, el) {
+    //     $(el).css({
+    //             marginLeft: "40px",
+    //             // visibility: "visible",
+
+    //         })
+    //         // $(el).animate({
+    //         //     // display: "block",
+    //         //     marginLeft: "-60px",
+    //         // })
+
+    // })
+    if (e.target.tagName.toLowerCase() === "a") {
+        // $(e.target).find("b").css({
+        //     visibility: "visible",
+        // });
+        $(e.target).find("b").animate({
+            marginLeft: "-60px",
+
+        })
+    }
+})
+$("#aside-right").on("mouseleave", function(e) {
+    if (e.target.tagName.toLowerCase() === "b") {
+        $(e.target).css({
+            marginLeft: "50px",
+            // visibility: "hidden",
+        })
+    }
+    if (e.target.tagName.toLowerCase() === "li") {
+        // console.log($("#aside-right").find("b"))
+        console.log(1)
+        $("#aside-right").find("b").each(function(idx, el) {
+            console.log(el);
+            $(el).css({
+                marginLeft: "50px",
+                // visibility: "hidden",
+            })
+        })
+
+    }
+
+})
+$("#aside-right-2").on("mouseover", function(e) {
+    // $.each($("#aside-right b"), function(idx, el) {
+    //     $(el).css({
+    //             marginLeft: "40px",
+    //             // visibility: "visible",
+
+    //         })
+    //         // $(el).animate({
+    //         //     // display: "block",
+    //         //     marginLeft: "-60px",
+    //         // })
+
+    // })
+    if (e.target.tagName.toLowerCase() === "a") {
+        // $(e.target).find("b").css({
+        //     visibility: "visible",
+        // });
+        $(e.target).find("b").animate({
+
+            marginLeft: "-60px",
+
+        })
+    }
+})
+$("#aside-right-2").on("mouseleave", function(e) {
+    if (e.target.tagName.toLowerCase() === "b") {
+        $(e.target).css({
+            marginLeft: "50px",
+            // visibility: "hidden",
+        })
+    }
+    if (e.target.tagName.toLowerCase() === "li") {
+        // console.log($("#aside-right").find("b"))
+        console.log(1)
+        $("#aside-right").find("b").each(function(idx, el) {
+            console.log(el);
+            $(el).css({
+                marginLeft: "50px",
+                // visibility: "hidden",
+            })
+        })
+
+    }
+
+})
+$(".GoTop").on("click", function() {
+    window.scrollTo(0, 0);
+})
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 6600) {
+        // $(".enjoyfix").css("display", "block");
+        $(".enjoyfix").slideDown();
+    } else {
+        $(".enjoyfix").slideUp();
+
+    }
+})
+
+//想改变middlect-bg的宽度
+// var width1 = document.body.offsetWidth
+// $(".middlect-bg").width(width1)
+
+//实现模拟transition：width的变化
+// $(".right").on("mouseover", function(e) {
+//     if (e.target.tagName.toLowerCase() === "img") {
+//         $(e.target).animate({
+//             width: "390px"
+//         })
+//     }
+
+// })
+// $(".right").on("mouseleave", function() {
+//     $(".right img").animate({
+//         width: "400px"
+//     })
+// })
