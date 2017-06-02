@@ -100,82 +100,252 @@ $(".buycar-dropdown").on("mouseleave", function() {
 $(".searchc").on("click", function() {
     //搜索
 })
-var carousel = $('.carousel');
-var btnnext = $('.btn-next');
-var btnpre = $('.btn-pre');
-var ctimgli = $('.ct-img li');
-var ctimg = $('.ct-img');
-var index = 0;
-var bullet = $('.bullet');
-var len = $('.ct-img li').width();
-ctimg.append(ctimgli.first().clone());
-ctimg.prepend(ctimgli.last().clone());
-var isLockUp = false;
-ctimg.css('left', -len);
-ctimg.width(ctimg.children().length * len);
-var play = function() {
-        let a = setInterval(function() {
-            ctimg.animate({
-                left: '-=' + len,
-            }, function() {
-                index++;
-                if (index == ctimgli.length) {
-                    index = 0;
-                    ctimg.css('left', -len + 'px');
-                }
-                setBullet();
-            })
-        }, 1500)
-        carousel.on("mouseover", function() {
-            clearInterval(a);
-        })
-    }
-    // play();
-carousel.on("mouseleave", function() {
-    // play();
-})
-btnnext.click(function() {
-    event.preventDefault();
-    if (isLockUp) {
-        return;
-    }
-    isLockUp = true;
-    ctimg.animate({
-        left: '-=' + len,
-    }, function() {
-        index++;
-        if (index == ctimgli.length) {
-            index = 0;
-            ctimg.css('left', -len + 'px');
-        }
-        setBullet();
-        isLockUp = false;
-    })
-})
-btnpre.click(function() {
-    if (isLockUp) return;
-    event.preventDefault();
-    ctimg.animate({
-        left: '+=' + len,
-    }, function() {
-        index--;
-        if (index < 0) {
-            ctimg.css('left', -ctimgli.length * ctimgli.width())
-            index = ctimgli.length - 1;
-        }
-        isLockUp = false;
-        setBullet();
-    })
-})
 
-function setBullet() {
-    // console.log(1);
-    bullet.children().css({
-        backgroundColor: "#fff",
-    }).eq(index).css({
-        backgroundColor: "red",
-    })
-}
+_Carousel = (function() { //在mouseover之后，在点击有问题。到时候再解决。
+    var Carousel = function(carousel, off) {
+        console.log("9", off);
+        this.carousel = carousel;
+        this.off = 1;
+        this.init();
+        this.bind();
+        this.play();
+        this.touch();
+    }
+    Carousel.prototype.touch = function() {
+        var _this = this;
+        bulletLi = this.bulletLi = this.carousel.find(".bullet li")
+        this.bullet.on("mouseover", function(e) {
+            if (e.target.tagName.toLowerCase() === "li") {
+                // console.log("eq", $(e.target).attr("index"), "index");
+                var index = $(e.target).attr("index");
+                !~! function setBullet(index) {
+                    _this.bullet.children().css({
+                        backgroundColor: "#fff",
+                    }).eq(index).css({
+                        backgroundColor: "red",
+                    })
+                    _this.ctimg.css({
+                        left: -_this.len + "px"
+                    })
+                    _this.ctimg.animate({
+                        left: '-=' + _this.len * index,
+                    })
+                }(index);
+            }
+        })
+
+
+    }
+    Carousel.prototype.init = function() {
+        var btnnext = this.btnnext = this.carousel.find('.btn-next');
+        var btnpre = this.btnpre = this.carousel.find('.btn-pre');
+        var ctimgli = this.ctimgli = this.carousel.find('.ct-img li');
+        var ctimg = this.ctimg = this.carousel.find('.ct-img');
+        var index = this.index = 0;
+        var bullet = this.bullet = this.carousel.find('.bullet');
+        var len = this.len = this.carousel.find('.ct-img li').width();
+        var isLockUp = this.isLockUp = false;
+        ctimg.append(ctimgli.first().clone());
+        ctimg.prepend(ctimgli.last().clone());
+        ctimg.css('left', -len);
+        ctimg.width(ctimg.children().length * len);
+    }
+    Carousel.prototype.bind = function() {
+        var _this = this;
+        // console.log("len:", this.len);
+        this.btnnext.click(function() {
+            _this.ctimg.css({
+                left: -_this.len + "px",
+            })
+            event.preventDefault();
+            if (_this.isLockUp) {
+                return;
+            }
+            _this.isLockUp = true;
+            _this.ctimg.animate({
+                left: '-=' + _this.len,
+            }, "linear", function() {
+                _this.index++;
+                if (_this.index == _this.ctimgli.length) {
+                    _this.index = 0;
+                    _this.ctimg.css('left', -_this.len + 'px');
+                }
+                setBullet.call(_this);
+                _this.isLockUp = false;
+            })
+        })
+        this.btnpre.click(function() {
+            if (_this.isLockUp) return;
+            event.preventDefault();
+            _this.ctimg.animate({
+                left: '+=' + _this.len,
+            }, "linear", function() {
+                _this.index--;
+                if (_this.index < 0) {
+                    _this.ctimg.css('left', -(_this.ctimgli.length * _this.ctimgli.width()))
+                    _this.index = _this.ctimgli.length - 1;
+                }
+                _this.isLockUp = false;
+                setBullet.bind(_this)();
+            })
+        })
+
+        function setBullet() {
+            this.bullet.children().css({
+                backgroundColor: "#fff",
+            }).eq(this.index).css({
+                backgroundColor: "red",
+            })
+        }
+    }
+    Carousel.prototype.play = function() {
+        var _this = this;
+
+        var handler = function() {
+            _this.ctimg.animate({
+                left: '-=' + _this.len,
+            }, "linear", function() {
+                _this.index++;
+                if (_this.index == _this.ctimgli.length) {
+                    _this.index = 0;
+                    _this.ctimg.css('left', -_this.len + 'px');
+                }
+                setBullet.call(_this);
+            })
+        }
+
+        var off = this.off;
+        // console.log(off);
+        var A = function(off) {
+                var a;
+                if (off) {
+                    var a = setInterval(handler, 1500)
+                        // console.log("md", off, typeof a) //完美，想到了进行类型判断。来清除所有的定时器
+                    return a;
+                } else {
+                    console.log("haofana", off)
+                    for (var i = 0; i < 9999999; i++) {
+                        clearInterval(i);
+                    }
+                    return;
+                }
+            }
+            // A();
+        this.carousel.on("mouseover", function() {
+            // clearInterval(A());
+            _this.off = 0;
+            A(_this.off);
+            // return;
+            // if(_this.carousel.on)
+
+        })
+        this.carousel.on("mouseleave", function() {
+            _this.off = 1;
+            A(_this.off);
+            // (function A() { setInterval(handler, 1500) })()
+
+            // alert("md");
+        })
+        A(this.off);
+
+        function setBullet() {
+            _this.bullet.children().css({
+                backgroundColor: "#fff",
+            }).eq(this.index).css({
+                backgroundColor: "red",
+            })
+        }
+    }
+    return {
+        init: function(ct) {
+            // console.log("ct", ct, "\n", "off:", off);
+            // new Carousel($(ct), off);
+
+            ct.each(function(index, node) {
+                new Carousel($(this));
+            })
+        }
+    }
+})()
+var a = new _Carousel.init($('.carousel'));
+// var b = new _Carousel.init($('#ct-2-middle-first')); //id啊，id啊===>#
+//想改造off控制开关。。。有bug,就不改造了
+// var carousel = $('.carousel');
+// var btnnext = $('.btn-next');
+// var btnpre = $('.btn-pre');
+// var ctimgli = $('.ct-img li');
+// var ctimg = $('.ct-img');
+// var index = 0;
+// var bullet = $('.bullet');
+// var len = $('.ct-img li').width();
+// ctimg.append(ctimgli.first().clone());
+// ctimg.prepend(ctimgli.last().clone());
+// var isLockUp = false;
+// ctimg.css('left', -len);
+// ctimg.width(ctimg.children().length * len);
+// var play = function() {
+//         let a = setInterval(function() {
+//             ctimg.animate({
+//                 left: '-=' + len,
+//             }, function() {
+//                 index++;
+//                 if (index == ctimgli.length) {
+//                     index = 0;
+//                     ctimg.css('left', -len + 'px');
+//                 }
+//                 setBullet();
+//             })
+//         }, 1500)
+//         carousel.on("mouseover", function() {
+//             clearInterval(a);
+//         })
+//     }
+//     // play();
+// carousel.on("mouseleave", function() {
+//     // play();
+// })
+// btnnext.click(function() {
+//     event.preventDefault();
+//     if (isLockUp) {
+//         return;
+//     }
+//     isLockUp = true;
+//     ctimg.animate({
+//         left: '-=' + len,
+//     }, function() {
+//         index++;
+//         if (index == ctimgli.length) {
+//             index = 0;
+//             ctimg.css('left', -len + 'px');
+//         }
+//         setBullet();
+//         isLockUp = false;
+//     })
+// })
+// btnpre.click(function() {
+//     if (isLockUp) return;
+//     event.preventDefault();
+//     ctimg.animate({
+//         left: '+=' + len,
+//     }, function() {
+//         index--;
+//         if (index < 0) {
+//             ctimg.css('left', -ctimgli.length * ctimgli.width())
+//             index = ctimgli.length - 1;
+//         }
+//         isLockUp = false;
+//         setBullet();
+//     })
+// })
+
+// function setBullet() {
+//     // console.log(1);
+//     bullet.children().css({
+//         backgroundColor: "#fff",
+//     }).eq(index).css({
+//         backgroundColor: "red",
+//     })
+// }
 
 $(".tabList").on("mouseover", function(e) {
     if (e.target.tagName.toLowerCase() === "div") {
@@ -601,3 +771,5 @@ $(window).scroll(function() {
 //         width: "400px"
 //     })
 // })
+
+// var b = new _Carousel.init($('.ct-2-middle-first'), 1);

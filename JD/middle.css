@@ -33,6 +33,7 @@
   margin: 20px 20px 0 0;
   width: 390px;
   height: 170px;
+  overflow: hidden;
 }
 .middlebox .middlect-sm .middlect-c-1 .middle-c-ul .middle-content .left {
   width: 140px;
@@ -70,7 +71,7 @@
   transition: width 0.4s ease-in-out;
 }
 .middlebox .middlect-sm .middlect-c-1 .middle-c-ul .middle-content .right img:hover {
-  width: 380px;
+  width: 390px;
 }
 .middlect-bg-content {
   width: 100%;
@@ -94,4 +95,37 @@
 }
 .middlect-bg-content ul li:hover {
   opacity: .7;
+}
+#ct-2-middle-first {
+  overflow: visible;
+}
+.Carousel {
+  position: relative;
+  overflow: visible;
+}
+.Carousel .carousel {
+  width: 400px;
+  height: 360px;
+  z-index: 4;
+}
+.Carousel .carousel .ct-img {
+  width: 400px;
+  height: 360px;
+}
+.Carousel .carousel .ct-img li {
+  width: 400px;
+  height: 360px;
+}
+.Carousel .carousel .ct-img img {
+  width: 100%;
+  height: 100%;
+}
+.Carousel .carousel a {
+  z-index: 4;
+}
+.Carousel #btn-next {
+  left: 360px;
+}
+.Carousel .bullet {
+  z-index: 4;
 }
