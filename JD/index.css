@@ -1313,6 +1313,7 @@
         height: 100px;
         background: #e0e0e0;
         padding: 20px 0;
+        margin-top: 30px;
     }
     
     .bigct-7>ul {
@@ -1341,6 +1342,7 @@
         position: fixed;
         right: 0px;
         top: 250px;
+        z-index: 99;
     }
     
     .aside-right ul>a {

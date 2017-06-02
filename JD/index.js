@@ -589,7 +589,7 @@ timeer.prototype.addEvent = function() {
         $(".timeout-show-third").text("0" + s)
     }
 }
-var old = "2017,6,3 00:00:00" //探索。目前这适合这个格式。
+var old = "2017,6,4 00:00:00" //探索。目前这适合这个格式。
 setInterval("new timeer(old)", 1000);
 
 $(".bigct-4-carousel").on("mouseover", function() {

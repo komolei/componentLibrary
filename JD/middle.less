@@ -1,4 +1,4 @@
-    @themeColor: rgb(227, 228, 229);
+    @themeColor: #f6f6f6;
     @contentColor: #e0e0e0;
     @margin: 0 auto;
     @padding: 0;
@@ -88,7 +88,7 @@
                 display: block;
                 width: 400px;
                 height: 170px; // float: right;
-                transition: width .4s ease-in-out;
+                transition: all .4s ease-in-out;
                 &:hover {
                     // margin-left: -10px;
                     width: 390px;
@@ -124,6 +124,7 @@
         height: 100px;
         background: #e0e0e0;
         padding: 20px 0;
+        margin-top: 30px;
         ul {
             width: 1190px;
             margin: 0 auto;
@@ -185,4 +186,44 @@
         overflow: visible;
         .CarouselInit(@w: 400px,
         @h: 360px);
+    }
+
+    .middle-content(@w: 190px,
+    @h: 170px) {
+        li {
+            width: @w+10;
+            float: left; // margin-left: 10px;
+            // background: #fff;
+            #left {
+                width: @w+10;
+                height: 0;
+                background: transparent;
+                top: 42%;
+                h4 {
+                    border-top: 2px solid #fff
+                }
+                p {
+                    border-bottom: none;
+                }
+            } // #info {
+            //     // width: @w+10;
+            //     // height: @h;
+            // }
+        }
+        #right {
+            width: @w+10;
+            img {
+                width: @w;
+                height: @h+10;
+                &:hover {
+                    // height: 170px;
+                    width: @w - 10; // margin-top: -10px;
+                }
+            }
+        }
+    }
+
+    .middle-content-ul {
+        width: 400px;
+        .middle-content();
     }

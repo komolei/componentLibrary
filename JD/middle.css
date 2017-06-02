@@ -1,10 +1,10 @@
 .middlect {
   width: 100%;
-  background-color: #e3e4e5;
+  background-color: #f6f6f6;
 }
 .ctInit {
   width: 1190px;
-  background-color: #e3e4e5;
+  background-color: #f6f6f6;
 }
 .p {
   margin: 0;
@@ -68,7 +68,7 @@
   display: block;
   width: 400px;
   height: 170px;
-  transition: width 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .middlebox .middlect-sm .middlect-c-1 .middle-c-ul .middle-content .right img:hover {
   width: 390px;
@@ -78,6 +78,7 @@
   height: 100px;
   background: #e0e0e0;
   padding: 20px 0;
+  margin-top: 30px;
 }
 .middlect-bg-content ul {
   width: 1190px;
@@ -128,4 +129,33 @@
 }
 .Carousel .bullet {
   z-index: 4;
+}
+.middle-content-ul {
+  width: 400px;
+}
+.middle-content-ul li {
+  width: 200px;
+  float: left;
+}
+.middle-content-ul li #left {
+  width: 200px;
+  height: 0;
+  background: transparent;
+  top: 42%;
+}
+.middle-content-ul li #left h4 {
+  border-top: 2px solid #fff;
+}
+.middle-content-ul li #left p {
+  border-bottom: none;
+}
+.middle-content-ul #right {
+  width: 200px;
+}
+.middle-content-ul #right img {
+  width: 190px;
+  height: 180px;
+}
+.middle-content-ul #right img:hover {
+  width: 180px;
 }
