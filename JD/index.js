@@ -589,7 +589,7 @@ timeer.prototype.addEvent = function() {
         $(".timeout-show-third").text("0" + s)
     }
 }
-var old = "2017,6,4 00:00:00" //探索。目前这适合这个格式。
+var old = "2017,6,6 00:00:00" //探索。目前这适合这个格式。
 setInterval("new timeer(old)", 1000);
 
 $(".bigct-4-carousel").on("mouseover", function() {
@@ -744,7 +744,7 @@ $(".GoTop").on("click", function() {
     window.scrollTo(0, 0);
 })
 $(window).scroll(function() {
-    if ($(window).scrollTop() > 6600) {
+    if ($(window).scrollTop() > 600) {
         // $(".enjoyfix").css("display", "block");
         $(".enjoyfix").slideDown();
     } else {
@@ -752,10 +752,37 @@ $(window).scroll(function() {
 
     }
 })
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 2200) {
+        // $(".enjoyfix").css("display", "block");
+        $(".middlect-aside").show();
+    } else {
+        $(".middlect-aside").hide();
+    }
+})
 
-//想改变middlect-bg的宽度
-// var width1 = document.body.offsetWidth
-// $(".middlect-bg").width(width1)
+$(".middlect-aside").on("click", function(e) {
+        e.preventDefault();
+        if (e.target.tagName.toLowerCase() === "li") {
+            // debugger;
+            var index = $(e.target).attr("index")
+            console.log("index++", index);
+            $("h3").each(function(idx, el) {
+                    if ($(el).attr("index") === index) {
+
+                        // console.log("this is el:", $(e.target))
+                        // window.scrollTo(0, el.scrollY + "px");
+                        console.log($(el).scrollTop(), "index:", index);
+
+                        window.scrollTo(0, (el.offsetTop - 30 - el.offsetHeight));
+                    }
+                })
+                // var $("h3")
+        }
+    })
+    //想改变middlect-bg的宽度
+    // var width1 = document.body.offsetWidth
+    // $(".middlect-bg").width(width1)
 
 //实现模拟transition：width的变化
 // $(".right").on("mouseover", function(e) {
@@ -773,3 +800,68 @@ $(window).scroll(function() {
 // })
 
 // var b = new _Carousel.init($('.ct-2-middle-first'), 1);
+
+
+var liveIndex = 0;
+$(".live-foot").each(function(idx, el) {
+    $(el).on("mouseover", function() {
+        $(".live-foot>a").css({
+            display: "block",
+            color: "red"
+        })
+
+    })
+});
+$(".live-foot>a").each(function(idx, el) {
+    $(el).on("mouseleave", function() {
+        $(".live-foot>a").css({
+            display: "none",
+        })
+
+    })
+});
+$("#live-foot-ul").each(function(idx, el) { $(el).css("left", "-1900px"); });
+$(".btn-left").each(function(idx, el) {
+    // console.log("idx:", idx, $(el));
+    $(el).on("click", function(e) {
+        event.preventDefault();
+        if (lock) return;
+        liveIndex++;
+        lock = true;
+        // console.log("this is debugger", $("#live-foot-ul").eq(idx));
+        $("#live-foot-ul").eq(idx).animate({
+            left: -95 * liveIndex * 5 + "px",
+        }, function() {
+            lock = false;
+        })
+        if (liveIndex >= 3) {
+            $("#live-foot-ul").eq(idx).css({
+                left: "-3800px"
+            })
+            liveIndex = 0;
+        }
+        // return lock;
+    })
+});
+$(".btn-right").each(function(idx, el) {
+    $(el).on("click", function(e) {
+
+        console.log("liveIndex:", liveIndex);
+        event.preventDefault();
+        if (lock) return;
+        lock = true;
+        liveIndex++;
+        $("#live-foot-ul").eq(idx).animate({
+            left: "-=" + 475 + "px",
+        }, function() {
+            lock = false;
+            // console.log(1);
+        })
+        if (liveIndex >= 3) {
+            $("#live-foot-ul").eq(idx).css({
+                left: "-1900" + "px",
+            })
+            liveIndex = 0;
+        }
+    })
+})
