@@ -755,7 +755,7 @@ $(window).scroll(function() {
 $(window).scroll(function() {
     if ($(window).scrollTop() > 2200) {
         // $(".enjoyfix").css("display", "block");
-        $(".middlect-aside").show();
+        $(".middlect-aside").show(1500);
     } else {
         $(".middlect-aside").hide();
     }
