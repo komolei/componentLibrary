@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .timeout-show>b {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #111;
+            margin: 0 2px;
+            font-size: 30px;
+            color: #fff;
+            /*margin-top: -5px;*/
+        }
+        
+        .icon {
+            width: 23px;
+            height: 25px;
+        }
+    </style>
+    <script src="http://at.alicdn.com/t/font_79p2c8uvbau7hkt9.js"></script>
+
+</head>
+
+<body>
+    <div class="timeout-show">
+        <b class="timeout-show-first"></b><svg class="icon" aria-hidden="true"><use xlink:href="#icon-weibiaoti9-copy"></use></svg>
+        <b class="timeout-show-second"></b><svg class="icon" aria-hidden="true"><use xlink:href="#icon-weibiaoti9-copy"></use></svg>
+        <b class="timeout-show-third"></b>
+    </div>
+</body>
+<script src="../jquery.js"></script>
+<script>
+    var timeer = function(old) {
+        this.old = old;
+        this.addEvent();
+
+    }
+    timeer.prototype.addEvent = function() {
+        var _this = this;
+        var now = new Date();
+        var old = new Date(_this.old);
+        var time = old - now;
+        var day = parseInt(time / (24 * 60 * 60 * 1000));
+        var h = parseInt(time / (1000 * 60 * 60) % 24);
+        var m = parseInt(time / (1000 * 60)) % 60;
+        var s = parseInt(time / 1000) % 60;
+        if (h >= 10) {
+            $(".timeout-show-first").text(h)
+        } else {
+            $(".timeout-show-first").text("0" + h)
+
+        }
+        // debugger;
+        if (m >= 10) {
+            $(".timeout-show-second").text(m)
+        } else {
+            $(".timeout-show-second").text("0" + m)
+        }
+        if (s >= 10) {
+            $(".timeout-show-third").text(s)
+        } else {
+            $(".timeout-show-third").text("0" + s)
+        }
+    }
+    var old = "2017,6,6 00:00:00" //探索。目前这适合这个格式。
+    setInterval("new timeer(old)", 1000);
+</script>
+
+</html>
